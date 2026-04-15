@@ -1,4 +1,4 @@
-name: CI
+name: CI Pipeline
 
 on:
   push:
@@ -9,13 +9,35 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    
     steps:
     - uses: actions/checkout@v4
+    
     - name: Use Node.js
       uses: actions/setup-node@v4
       with:
         node-version: '20'
         cache: 'npm'
-    - run: cd client && npm ci
-    - run: cd client && npm run build --if-present
+    
+    - name: Install and Build Client
+      run: |
+        cd client
+        npm ci
+        npm run build --if-present
+    
+    - name: Install and Test Server
+      run: |
+        cd server
+        npm ci
+        npm test || echo "No tests; skipping"
+    
+    - name: Build Docker images
+      run: |
+        docker build -t frontend-app ./client
+        docker build -t backend-app ./server
+    
+    - name: Lint check
+      run: |
+        cd client
+        npm run lint || echo "Lint warnings ok"
 

@@ -1,0 +1,42 @@
+.app {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.add-form {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.add-form input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px 0 0 4px;
+}
+
+.add-form button {
+  padding: 10px 20px;
+  background: #0070f3;
+  color: white;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+
+.add-form button:hover {
+  background: #005bb5;
+}
+
+.todo-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.todo-list li {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+

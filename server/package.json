@@ -1,0 +1,6 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Placeholder server (logic moved to Vercel API for deployment)"
+}
+

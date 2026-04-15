@@ -11,7 +11,7 @@ Backend: http://localhost:3001/todos
 
 ## CI/CD
 - **CI**: Tests, lint, Docker build on push/PR.
-- **CD**: Docker build/push to Docker Hub (ravi-cvt/frontend-app:backend-app:latest) on main push.
+- **CD**: Docker build/push to Docker Hub (ravishamra/exp9) on main push.
 
 ## Screenshots
 (Add CI/CD green checks + Docker Hub dashboard here)

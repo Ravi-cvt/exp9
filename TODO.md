@@ -1,7 +1,7 @@
 # Docker CI/CD Complete
 
 Repo: https://github.com/Ravi-cvt/exp9
-DH: ravi-cvt/frontend-app:backend-app:latest
+DH: ravishamra/exp9:general
 
 **Files created/pushed:**
 - Dockerfiles: client/, server/

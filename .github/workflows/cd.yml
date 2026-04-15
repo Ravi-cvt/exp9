@@ -28,12 +28,12 @@ jobs:
       with:
         context: ./client
         push: true
-        tags: ravi-cvt/frontend-app:latest
+        tags: ravishamra/exp9:frontend-latest
 
     - name: Build and push backend-app
       uses: docker/build-push-action@v6
       with:
         context: ./server
         push: true
-        tags: ravi-cvt/backend-app:latest
+        tags: ravishamra/exp9:backend-latest
 

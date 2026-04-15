@@ -28,12 +28,12 @@ jobs:
       with:
         context: ./client
         push: true
-        tags: ravishamra/exp9:frontend-latest
+        tags: ${{ secrets.DOCKERHUB_USERNAME }}/exp9:frontend-latest
 
     - name: Build and push backend-app
       uses: docker/build-push-action@v6
       with:
         context: ./server
         push: true
-        tags: ravishamra/exp9:backend-latest
+        tags: ${{ secrets.DOCKERHUB_USERNAME }}/exp9:backend-latest
 
